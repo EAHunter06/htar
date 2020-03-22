@@ -1,2 +1,2 @@
 # htar
-A mini archiver program
+A mini archiver program for linux
