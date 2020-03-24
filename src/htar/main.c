@@ -1,6 +1,6 @@
 #include "comp.h"
-#define EXIT(n)               \
-	free(arr);          	      \
+#define EXIT(n)                 \
+	free(arr);          	    \
 	fclose(f.ff);               \
 	fclose(f.df);               \
 	remove("___htar_tmp___");   \
@@ -27,7 +27,7 @@ int main(int argc,char **argv){
 	int c;
 	unsigned char type;
 	ino_t inode,ino;
-	size_t cnt=0,sz=0,lc=0,lcb,*arr=malloc(128*sizeof(size_t)),arrs=128*sizeof(size_t),sp,i;
+	size_t cnt=0,sz=0,lc=0,lcb,*arr=malloc(128*sizeof(size_t)),arrs=128*sizeof(size_t),sp,i,ap=0;
 	_Bool sf=0;
 
 	do{
@@ -57,8 +57,9 @@ int main(int argc,char **argv){
         fread(&inode,sizeof(ino_t),1,f.ff);
 		fgets(buf,MAXPATHLEN-1,f.ff);
 		if(feof(f.ff)) break;
-		for(i=0;i<sz;i++) if(arr[i]==lc){
+		for(i=ap;i<sz;i++) if(arr[i]==lc){
             sf=1;
+			ap++;
             continue;
         }
 		if(sf){
