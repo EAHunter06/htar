@@ -1,3 +1,7 @@
+/**
+ * Copyright (c) 2020 Ege Avcı
+ * Licensed under the GNU General Public License
+ */
 #include "comp.h"
 #define EXIT(n)                 \
 	free(arr);          	    \
