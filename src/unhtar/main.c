@@ -1,3 +1,7 @@
+/**
+ * Copyright (c) 2020 Ege Avcı
+ * Licensed under the GNU General Public License
+ */
 #include <stdio.h>
 #include <string.h>
 #include <dirent.h>
